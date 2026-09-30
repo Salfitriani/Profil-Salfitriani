@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Profil Mahasiswa - Salfitriani</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <style>
+
+        /* =====================================================
+           WARNA UTAMA
+        ====================================================== */
+
+        :root {
+
+            --dark: #292326;
+            --dark-soft: #3a3033;
+
+            --cream: #f8f3ee;
+            --cream-dark: #eee5df;
+
+            --pink: #d8b7b8;
+            --pink-light: #ead9d8;
+
+            --mauve: #9c7b82;
+
+            --gold: #c5a276;
+            --gold-light: #e3cda9;
+
+            --text: #51494a;
+            --muted: #8d8382;
+
+            --white: #ffffff;
+
+            --line: #ded3cd;
+        }
+
+
+        /* =====================================================
+           GLOBAL
+        ====================================================== */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            margin: 0;
+
+            background: var(--cream);
+
+            color: var(--text);
+
+            font-family: 'DM Sans', sans-serif;
+
+            line-height: 1.7;
+
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ====================================================== */
+
+        .navbar {
+
+            min-height: 82px;
+
+            margin-bottom: 0;
+
+            border: none;
+
+            border-radius: 0;
+
+            background: var(--dark);
+
+        }
+
+
+        .navbar-brand {
+
+            height: 82px;
+
+            padding: 24px 15px;
+
+            color: #f8eee8 !important;
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 27px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .navbar-nav > li > a {
+
+            height: 82px;
+
+            padding: 30px 20px 0;
+
+            color: #e8dedb !important;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+
+        }
+
+
+        .navbar-nav > li > a:hover {
+
+            background: transparent !important;
+
+            color: var(--gold-light) !important;
+
+        }
+
+
+        .navbar-nav > .active > a {
+
+            background: transparent !important;
+
+            color: var(--gold-light) !important;
+
+        }
+
+
+        .navbar-nav > .active > a::after {
+
+            content: "";
+
+            display: block;
+
+            width: 25px;
+
+            height: 2px;
+
+            margin-top: 7px;
+
+            background: var(--gold);
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ====================================================== */
+
+        .hero {
+
+            position: relative;
+
+            min-height: 570px;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(216,183,184,0.17),
+                    transparent 25%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #292326 0%,
+                    #332b2e 100%
+                );
+
+            color: white;
+
+        }
+
+
+        .hero-circle {
+
+            position: absolute;
+
+            width: 390px;
+
+            height: 390px;
+
+            top: -170px;
+
+            right: -80px;
+
+            border: 1px solid rgba(227,205,169,0.28);
+
+            border-radius: 50%;
+
+        }
+
+
+        .hero-circle::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 270px;
+
+            height: 270px;
+
+            top: 60px;
+
+            left: 60px;
+
+            border: 1px solid rgba(216,183,184,0.20);
+
+            border-radius: 50%;
+
+        }
+
+
+        .hero-line {
+
+            position: absolute;
+
+            width: 170px;
+
+            height: 1px;
+
+            bottom: 70px;
+
+            left: 0;
+
+            background: rgba(227,205,169,0.35);
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 2;
+
+            padding-top: 115px;
+
+        }
+
+
+        .hero-label {
+
+            display: inline-block;
+
+            margin-bottom: 24px;
+
+            padding: 7px 15px;
+
+            border: 1px solid rgba(227,205,169,0.55);
+
+            border-radius: 30px;
+
+            color: var(--gold-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 2.5px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .hero h1 {
+
+            margin: 0;
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 67px;
+
+            font-weight: 700;
+
+            line-height: 1.05;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--pink);
+
+        }
+
+
+        .hero-subtitle {
+
+            max-width: 570px;
+
+            margin-top: 23px;
+
+            color: #d8ced0;
+
+            font-size: 16px;
+
+        }
+
+
+        .hero-button {
+
+            display: inline-block;
+
+            margin-top: 30px;
+
+            padding: 12px 21px;
+
+            border: 1px solid var(--gold);
+
+            color: var(--gold-light);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            transition: 0.3s;
+
+        }
+
+
+        .hero-button:hover {
+
+            background: var(--gold);
+
+            color: var(--dark);
+
+        }
+
+
+        /* =====================================================
+           FOTO
+        ====================================================== */
+
+        .photo-card {
+
+            position: relative;
+
+            width: 285px;
+
+            margin: 15px auto 0;
+
+        }
+
+
+        .photo-frame {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: 100%;
+
+            top: 13px;
+
+            left: 13px;
+
+            border: 1px solid var(--gold);
+
+        }
+
+
+        .photo-card img {
+
+            position: relative;
+
+            z-index: 2;
+
+            display: block;
+
+            width: 100%;
+
+            height: 350px;
+
+            object-fit: cover;
+
+            border: 8px solid var(--dark-soft);
+
+            box-shadow: 0 20px 45px rgba(0,0,0,0.30);
+
+        }
+
+
+        .photo-label {
+
+            position: absolute;
+
+            z-index: 3;
+
+            right: -15px;
+
+            bottom: 25px;
+
+            padding: 8px 13px;
+
+            background: var(--cream);
+
+            color: var(--dark);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =====================================================
+           SECTION
+        ====================================================== */
+
+        .section {
+
+            padding: 90px 0;
+
+        }
+
+
+        .section-label {
+
+            margin-bottom: 8px;
+
+            color: var(--mauve);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .section-title {
+
+            margin: 0 0 18px;
+
+            color: var(--dark);
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 42px;
+
+            font-weight: 700;
+
+        }
+
+
+        .gold-line {
+
+            width: 50px;
+
+            height: 3px;
+
+            margin-bottom: 30px;
+
+            background: var(--gold);
+
+        }
+
+
+        /* =====================================================
+           ALERT WAJIB DARI KODE DOSEN
+        ====================================================== */
+
+        .welcome-alert {
+
+            margin-bottom: 35px;
+
+            border: none;
+
+            border-left: 4px solid var(--gold);
+
+            border-radius: 0;
+
+            background: var(--pink-light);
+
+            color: #594d4e;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ====================================================== */
+
+        .about-section {
+
+            background: var(--cream);
+
+        }
+
+
+        .about-box {
+
+            padding: 40px;
+
+            background: var(--white);
+
+            border: 1px solid var(--line);
+
+            box-shadow: 0 20px 45px rgba(63,49,50,0.07);
+
+        }
+
+
+        .about-box p {
+
+            margin-bottom: 18px;
+
+            color: #655d5d;
+
+            font-size: 14px;
+
+        }
+
+
+        .quote {
+
+            margin-top: 30px;
+
+            padding: 20px 25px;
+
+            background: var(--dark);
+
+            border-left: 4px solid var(--gold);
+
+            color: var(--pink-light);
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 19px;
+
+            font-style: italic;
+
+        }
+
+
+        /* =====================================================
+           BIODATA
+        ====================================================== */
+
+        .bio-card {
+
+            padding: 30px;
+
+            background: var(--dark);
+
+            color: white;
+
+            box-shadow: 0 20px 45px rgba(63,49,50,0.12);
+
+        }
+
+
+        .bio-card-title {
+
+            margin-bottom: 20px;
+
+            color: var(--gold-light);
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 25px;
+
+        }
+
+
+        .bio-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid rgba(255,255,255,0.10);
+
+        }
+
+
+        .bio-row:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .bio-label {
+
+            color: #aaa0a0;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .bio-value {
+
+            color: white;
+
+            font-size: 12px;
+
+            font-weight: 600;
+
+            text-align: right;
+
+        }
+
+
+        /* =====================================================
+           DIGITAL INFO
+        ====================================================== */
+
+        .digital-row {
+
+            margin-top: 55px;
+
+        }
+
+
+        .digital-card {
+
+            padding: 25px;
+
+            background: var(--dark);
+
+            color: white;
+
+        }
+
+
+        .digital-number {
+
+            margin-bottom: 5px;
+
+            color: var(--gold-light);
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 35px;
+
+            font-weight: 700;
+
+        }
+
+
+        .digital-label {
+
+            color: #aaa0a0;
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =====================================================
+           AKADEMIK
+        ====================================================== */
+
+        .academic-section {
+
+            background: var(--cream-dark);
+
+        }
+
+
+        .academic-intro {
+
+            margin-bottom: 35px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+
+        }
+
+
+        .course-table-wrapper {
+
+            overflow: hidden;
+
+            background: white;
+
+            border: 1px solid var(--line);
+
+            box-shadow: 0 18px 40px rgba(63,49,50,0.07);
+
+        }
+
+
+        .course-table {
+
+            width: 100%;
+
+            margin: 0;
+
+        }
+
+
+        .course-table thead {
+
+            background: var(--dark);
+
+        }
+
+
+        .course-table th {
+
+            padding: 16px 12px !important;
+
+            border: none !important;
+
+            color: var(--gold-light);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.5px;
+
+            text-align: center;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .course-table td {
+
+            padding: 14px 12px !important;
+
+            border-top: 1px solid #eee5df !important;
+
+            color: var(--text);
+
+            font-size: 12px;
+
+            text-align: center;
+
+        }
+
+
+        .course-table tbody tr {
+
+            transition: 0.25s;
+
+        }
+
+
+        .course-table tbody tr:hover {
+
+            background: #faf3f1;
+
+        }
+
+
+        .course-table .number {
+
+            color: var(--mauve);
+
+            font-weight: 700;
+
+        }
+
+
+        .course-table .course-name {
+
+            color: var(--dark);
+
+            font-weight: 600;
+
+            text-align: left;
+
+        }
+
+
+        /* =====================================================
+           KONTAK
+        ====================================================== */
+
+        .contact-section {
+
+            background: var(--cream);
+
+        }
+
+
+        .contact-card {
+
+            display: block;
+
+            min-height: 175px;
+
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid var(--line);
+
+            border-top: 3px solid var(--gold);
+
+            box-shadow: 0 15px 35px rgba(63,49,50,0.06);
+
+            transition: 0.3s;
+
+        }
+
+
+        .contact-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: 0 22px 45px rgba(63,49,50,0.12);
+
+            border-top-color: var(--mauve);
+
+        }
+
+
+        .contact-icon {
+
+            margin-bottom: 15px;
+
+            color: var(--mauve);
+
+            font-size: 25px;
+
+        }
+
+
+        .contact-label {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+            color: var(--muted);
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .contact-value {
+
+            display: block;
+
+            color: var(--dark);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            word-break: break-word;
+
+        }
+
+
+        .contact-action {
+
+            display: block;
+
+            margin-top: 13px;
+
+            color: var(--mauve);
+
+            font-size: 10px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ====================================================== */
+
+        footer {
+
+            padding: 35px 0;
+
+            background: var(--dark);
+
+            text-align: center;
+
+        }
+
+
+        .footer-name {
+
+            margin-bottom: 7px;
+
+            color: var(--gold-light);
+
+            font-family: 'Playfair Display', serif;
+
+            font-size: 22px;
+
+            font-weight: 700;
+
+        }
+
+
+        footer p {
+
+            margin: 2px 0;
+
+            color: #9c9292;
+
+            font-size: 11px;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ====================================================== */
+
+        @media (max-width: 991px) {
+
+            .photo-card {
+
+                margin-top: 50px;
+
+            }
+
+            .about-box {
+
+                margin-bottom: 25px;
+
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .navbar {
+
+                min-height: 65px;
+
+            }
+
+            .navbar-brand {
+
+                height: 65px;
+
+                padding-top: 20px;
+
+                font-size: 22px;
+
+            }
+
+            .navbar-nav > li > a {
+
+                height: auto;
+
+                padding: 12px 15px;
+
+            }
+
+            .navbar-nav > .active > a::after {
+
+                display: none;
+
+            }
+
+            .hero {
+
+                min-height: auto;
+
+                padding-bottom: 70px;
+
+            }
+
+            .hero-content {
+
+                padding-top: 80px;
+
+            }
+
+            .hero h1 {
+
+                font-size: 48px;
+
+            }
+
+            .hero-subtitle {
+
+                font-size: 14px;
+
+            }
+
+            .photo-card {
+
+                width: 250px;
+
+                margin-top: 60px;
+
+            }
+
+            .photo-card img {
+
+                height: 310px;
+
+            }
+
+            .section {
+
+                padding: 65px 0;
+
+            }
+
+            .section-title {
+
+                font-size: 34px;
+
+            }
+
+            .about-box {
+
+                padding: 25px;
+
+            }
+
+            .bio-card {
+
+                padding: 25px;
+
+            }
+
+            .course-table th,
+            .course-table td {
+
+                padding: 10px 7px !important;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav class="navbar navbar-inverse">
+
+    <div class="container">
+
+        <div class="navbar-header">
+
+            <button type="button"
+                    class="navbar-toggle collapsed"
+                    data-toggle="collapse"
+                    data-target="#menuNavbar">
+
+                <span class="sr-only">
+                    Toggle navigation
+                </span>
+
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+
+            </button>
+
+
+            <a class="navbar-brand" href="#">
+                SALFITRIANI
+            </a>
+
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="menuNavbar">
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li class="active">
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#profil">
+                        Profil
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#akademik">
+                        Akademik
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#kontak">
+                        Kontak
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<section class="hero">
+
+    <div class="hero-circle"></div>
+
+    <div class="hero-line"></div>
+
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+
+            <!-- KONTEN HERO -->
+
+            <div class="col-md-7">
+
+                <div class="hero-label">
+                    PROFIL MAHASISWA
+                </div>
+
+
+                <h1>
+
+                    Selamat
+                    <br>
+
+                    <span>Datang.</span>
+
+                </h1>
+
+
+                <p class="hero-subtitle">
+
+                    Website pribadi Salfitriani •
+                    Mahasiswa Statistika Universitas Negeri Makassar
+
+                </p>
+
+
+                <a href="#profil" class="hero-button">
+
+                    Kenali Saya
+                    &nbsp; ↓
+
+                </a>
+
+            </div>
+
+
+            <!-- FOTO -->
+
+            <div class="col-md-5">
+
+                <div class="photo-card">
+
+                    <div class="photo-frame"></div>
+
+
+                    <img src="Foto.png.png"
+                         alt="Foto Salfitriani">
+
+
+                    <div class="photo-label">
+
+                        Statistics Student
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFIL / TENTANG SAYA
+====================================================== -->
+
+<section class="section about-section" id="profil">
+
+    <div class="container">
+
+
+        <div class="section-label">
+            01 / About Me
+        </div>
+
+
+        <h2 class="section-title">
+            Tentang Saya
+        </h2>
+
+
+        <div class="gold-line"></div>
+
+
+        <!-- ALERT WAJIB DARI TUGAS -->
+
+        <div class="alert alert-success welcome-alert">
+
+            Selamat datang di website saya
+
+        </div>
+
+
+        <div class="row">
+
+
+            <!-- KONTEN UTAMA -->
+
+            <div class="col-md-8">
+
+                <div class="about-box">
+
+                    <p>
+
+                        Halo, saya Salfitriani, mahasiswa Program Studi
+                        Statistika UNM. Saat ini saya sedang belajar
+                        membuat website menggunakan HTML, CSS, dan
+                        Bootstrap 3 pada mata kuliah Rancangan Web.
+
+                    </p>
+
+
+                    <p>
+
+                        Halaman ini saya buat sebagai tugas untuk melatih
+                        penggunaan komponen dasar dan grid system
+                        Bootstrap agar tampilan website rapi dan
+                        responsif di berbagai ukuran layar.
+
+                    </p>
+
+
+                    <div class="quote">
+
+                        “Small steps, consistent progress.”
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR / BIODATA -->
+
+            <div class="col-md-4">
+
+                <div class="bio-card">
+
+                    <div class="bio-card-title">
+                        Biodata Singkat
+                    </div>
+
+
+                    <div class="bio-row">
+
+                        <span class="bio-label">
+                            Nama
+                        </span>
+
+                        <span class="bio-value">
+                            Salfitriani
+                        </span>
+
+                    </div>
+
+
+                    <div class="bio-row">
+
+                        <span class="bio-label">
+                            NIM
+                        </span>
+
+                        <span class="bio-value">
+                            240112502004
+                        </span>
+
+                    </div>
+
+
+                    <div class="bio-row">
+
+                        <span class="bio-label">
+                            Jurusan
+                        </span>
+
+                        <span class="bio-value">
+                            Statistika
+                        </span>
+
+                    </div>
+
+
+                    <div class="bio-row">
+
+                        <span class="bio-label">
+                            Kampus
+                        </span>
+
+                        <span class="bio-value">
+                            UNM
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- INFORMASI TAMBAHAN -->
+
+        <div class="row digital-row">
+
+
+            <div class="col-sm-4">
+
+                <div class="digital-card">
+
+                    <div class="digital-number">
+                        01
+                    </div>
+
+                    <div class="digital-label">
+                        Statistics
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-4">
+
+                <div class="digital-card">
+
+                    <div class="digital-number">
+                        09
+                    </div>
+
+                    <div class="digital-label">
+                        Mata Kuliah
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-sm-4">
+
+                <div class="digital-card">
+
+                    <div class="digital-number">
+                        UNM
+                    </div>
+
+                    <div class="digital-label">
+                        Universitas Negeri Makassar
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MATA KULIAH
+====================================================== -->
+
+<section class="section academic-section" id="akademik">
+
+    <div class="container">
+
+
+        <div class="section-label">
+            02 / Academic
+        </div>
+
+
+        <h2 class="section-title">
+            Mata Kuliah Semester Ini
+        </h2>
+
+
+        <div class="gold-line"></div>
+
+
+        <p class="academic-intro">
+
+            Berikut merupakan daftar mata kuliah yang saya
+            jalani pada semester ini.
+
+        </p>
+
+
+        <div class="course-table-wrapper">
+
+            <div class="table-responsive">
+
+
+                <table class="table table-striped table-bordered course-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                No
+                            </th>
+
+                            <th>
+                                Nama Mata Kuliah
+                            </th>
+
+                            <th>
+                                Kelas
+                            </th>
+
+                            <th>
+                                Hari
+                            </th>
+
+                            <th>
+                                Jam
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <tr>
+
+                            <td class="number">
+                                1
+                            </td>
+
+                            <td class="course-name">
+                                Model Linear
+                            </td>
+
+                            <td>
+                                02
+                            </td>
+
+                            <td>
+                                Senin
+                            </td>
+
+                            <td>
+                                13.10 - 15.40
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                2
+                            </td>
+
+                            <td class="course-name">
+                                Resampling Methods
+                            </td>
+
+                            <td>
+                                03
+                            </td>
+
+                            <td>
+                                Senin
+                            </td>
+
+                            <td>
+                                16.10 - 17.50
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                3
+                            </td>
+
+                            <td class="course-name">
+                                Manajemen Data
+                            </td>
+
+                            <td>
+                                02
+                            </td>
+
+                            <td>
+                                Selasa
+                            </td>
+
+                            <td>
+                                07.30 - 10.00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                4
+                            </td>
+
+                            <td class="course-name">
+                                Data Mining
+                            </td>
+
+                            <td>
+                                03
+                            </td>
+
+                            <td>
+                                Selasa
+                            </td>
+
+                            <td>
+                                13.10 - 15.40
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                5
+                            </td>
+
+                            <td class="course-name">
+                                Statistika Terapan Bisnis
+                            </td>
+
+                            <td>
+                                03
+                            </td>
+
+                            <td>
+                                Selasa
+                            </td>
+
+                            <td>
+                                16.10 - 17.50
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                6
+                            </td>
+
+                            <td class="course-name">
+                                Rancangan Percobaan
+                            </td>
+
+                            <td>
+                                02
+                            </td>
+
+                            <td>
+                                Rabu
+                            </td>
+
+                            <td>
+                                13.10 - 15.40
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                7
+                            </td>
+
+                            <td class="course-name">
+                                Statistika Peubah Banyak 1
+                            </td>
+
+                            <td>
+                                02
+                            </td>
+
+                            <td>
+                                Kamis
+                            </td>
+
+                            <td>
+                                07.30 - 10.00
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                8
+                            </td>
+
+                            <td class="course-name">
+                                Rancangan WEB
+                            </td>
+
+                            <td>
+                                02
+                            </td>
+
+                            <td>
+                                Kamis
+                            </td>
+
+                            <td>
+                                10.05 - 12.35
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td class="number">
+                                9
+                            </td>
+
+                            <td class="course-name">
+                                Teori Ekonomi Makro
+                            </td>
+
+                            <td>
+                                02
+                            </td>
+
+                            <td>
+                                Jum'at
+                            </td>
+
+                            <td>
+                                07.30 - 10.00
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     KONTAK
+====================================================== -->
+
+<section class="section contact-section" id="kontak">
+
+    <div class="container">
+
+
+        <div class="section-label">
+            03 / Get In Touch
+        </div>
+
+
+        <h2 class="section-title">
+            Let's Connect.
+        </h2>
+
+
+        <div class="gold-line"></div>
+
+
+        <div class="row">
+
+
+            <!-- EMAIL -->
+
+            <div class="col-md-4 col-sm-4">
+
+                <a href="mailto:ssalfitrianii24@gmail.com">
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            ✉
+                        </div>
+
+                        <span class="contact-label">
+                            Email
+                        </span>
+
+                        <span class="contact-value">
+                            ssalfitrianii24@gmail.com
+                        </span>
+
+                        <span class="contact-action">
+                            Kirim Email →
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- WHATSAPP -->
+
+            <div class="col-md-4 col-sm-4">
+
+                <a href="https://wa.me/6285397407988"
+                   target="_blank">
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            ☎
+                        </div>
+
+                        <span class="contact-label">
+                            WhatsApp
+                        </span>
+
+                        <span class="contact-value">
+                            085397407988
+                        </span>
+
+                        <span class="contact-action">
+                            Chat WhatsApp →
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- INSTAGRAM -->
+
+            <div class="col-md-4 col-sm-4">
+
+                <a href="https://www.instagram.com/slft_an?igsi=MmtwdWdjZzkwMGlt&utm_source=qr"
+                   target="_blank">
+
+                    <div class="contact-card">
+
+                        <div class="contact-icon">
+                            ◎
+                        </div>
+
+                        <span class="contact-label">
+                            Instagram
+                        </span>
+
+                        <span class="contact-value">
+                            @slft_an
+                        </span>
+
+                        <span class="contact-action">
+                            Kunjungi Instagram →
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-name">
+            SALFITRIANI
+        </div>
+
+        <p>
+            240112502004 • Statistika • Universitas Negeri Makassar
+        </p>
+
+        <p>
+            © 2026 Personal Digital Profile
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT BOOTSTRAP
+====================================================== -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js">
+</script>
+
+
+</body>
+
+</html>
